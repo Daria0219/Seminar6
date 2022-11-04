@@ -21,7 +21,7 @@ Console.WriteLine();
 Console.WriteLine(kol);
 */
 
-// №2 точка пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2
+/* №2 точка пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2
 
 double x=0;
 double y=0;
@@ -37,3 +37,19 @@ else
 {   x=(b2-b1)/(k1-k2);
     y=k1*x + b1;
     Console.WriteLine($"точка пересечения прямых ({x}; {y})");}
+    */
+
+Console.WriteLine("Введите действительное положительное число a и целое неотрицательное число n");
+double a = double.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+
+double Power(double a, int n){
+    if (n<0) {Console.WriteLine("ошибка");}
+    if (n==0) return 1; else{
+    while (n>0)
+    {return a*Power(a, n-1);}}
+    return 0;
+}
+Console.WriteLine(Power(a,n));
+
+
