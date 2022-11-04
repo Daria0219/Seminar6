@@ -39,6 +39,8 @@ else
     Console.WriteLine($"точка пересечения прямых ({x}; {y})");}
     */
 
+/* Дополнительно
+
 Console.WriteLine("Введите действительное положительное число a и целое неотрицательное число n");
 double a = double.Parse(Console.ReadLine());
 int n = int.Parse(Console.ReadLine());
@@ -51,5 +53,16 @@ double Power(double a, int n){
     return 0;
 }
 Console.WriteLine(Power(a,n));
+*/
 
+// Дополнительно
 
+Console.WriteLine("Введите число N");
+int n = int.Parse(Console.ReadLine());
+int [,] mass = new int [n,n];
+for (int i=0; i<n; i++){
+    for (int j=0; j<n; j++){
+        if (i<j) mass[i,j]=i+1; else mass[i,j]=j+1;
+        Console.Write(mass[i,j]+" ");}     
+Console.WriteLine();
+}
